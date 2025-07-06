@@ -1,0 +1,135 @@
+.contact_container {
+    margin-top: 2rem;
+}
+
+.heading {
+    text-align: center;
+    font-family: 'Poppins';
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.container {
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.darkbg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    height: max-content;
+    overflow: auto;
+    padding: 20px 20px;
+}
+
+.darkbg h3 {
+    text-align: center;
+    font-family: 'Roboto';
+    color: rgb(57, 19, 19);
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 40%;
+    padding: 10px 10px;
+    flex-wrap: wrap;
+    margin: 10px 5px;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+input,
+textarea {
+    margin: 10px;
+    padding: 8px 20px;
+    border: 1px solid grey;
+    max-width: 90%;
+    font-size: 1.2rem;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 10rem;
+    font-size: 1.2rem;
+    font-family: 'Roboto';
+}
+
+input,
+textarea:focus {
+    outline: none;
+}
+
+.button {
+    background-color: #00a676;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+    font-size: 19px;
+    margin: 20px 0px 7px 0px;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.content .btn button:hover {
+    background-color: #077052;
+}
+
+.container .darkbg .map {
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    padding: 1px 0px;
+}
+
+.map h3 {
+    margin: 0;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media(max-width:943px) {
+    .darkbg {
+        justify-content: center;
+    }
+
+    form {
+        width: 95%
+    }
+
+    .container .darkbg .map {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:768px) {
+    .container .darkbg .map {
+        width: 100%;
+    }
+
+    .container .darkbg .map iframe {
+        width: 100%;
+        height: 300px;
+    }
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+.banner {
+    position: relative;
+    height: 25rem;
+}
+
+.image {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.darkbc {
+    background-color: rgba(0, 0, 0, 0.263);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 80%;
+    animation: fadeSlideIn 1.2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.content button {
+    margin: 0;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #00a676;
+    padding: 6px 10px;
+    color: white;
+    border-radius: 8px;
+}
+
+.content button:hover {
+    background-color: #077052;
+}
+
+.title {
+    font-size: 2rem;
+    margin: 0;
+    color: #f0f0f0;
+    cursor: pointer;
+    font-family: 'Roboto';
+}
+
+.description {
+    font-size: 1.2rem;
+    font-family: 'Roboto';
+    color: #f3f3f3;
+    line-height: 29px;
+}
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

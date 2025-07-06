@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.card {
+    width: 18rem;
+    overflow: hidden;
+    margin: 5px;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    flex: 0 0 auto;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card img {
+    width: 18rem;
+    height: 14rem;
+    object-fit: cover;
+}
+
+.card .middle {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 4px;
+}
+
+.card .middle .text .price {
+    font-family: 'Roboto';
+}
+
+.card .middle .text {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.card .middle .price {
+    color: rgba(235, 102, 78, 1);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.card .rtext {
+    color: rgb(80, 79, 79);
+    font-size: 13px;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.card .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4px 0px;
+    border-top: 1px solid rgb(90, 89, 89);
+    border-bottom: 1px solid rgb(90, 89, 89);
+    margin: 0px 5px;
+}
+
+.card .bottom .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    padding: 0px 5px;
+}
+
+.card .bottom .icons p {
+    margin: 0px 0px 0px 5px;
+    font-size: 15px;
+}
+
+.fabed {
+    font-size: 19px;
+    color: rgb(82, 81, 81);
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 19rem;
+    }
+
+    .card img {
+        width: 19rem;
+    }
+}
+
+.card .enquiry {
+    margin: 9px 0px 4px 3px;
+    background-color: rgb(255, 55, 0);
+    border-radius: 5px;
+    padding: 6px 13px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+}
+
+.card .enquiry:hover {
+    background-color: rgb(88, 23, 4);
+}

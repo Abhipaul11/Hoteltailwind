@@ -1,0 +1,99 @@
+ .secondpart {
+     display: flex;
+     padding: 1.2rem;
+     flex-direction: column;
+     align-items: center;
+     margin-bottom: 1rem;
+ }
+
+ .secondpart .heading h3 {
+     font-size: 25px;
+     text-align: center;
+     width: 100%;
+     font-family: 'Roboto';
+     font-weight: 400;
+     color: rgb(8, 8, 8);
+     font-weight: 800;
+ }
+
+ .secondpart p {
+     font-size: 17px;
+     text-align: center;
+     width: 100%;
+     background: none;
+     font-family: 'Poppins';
+     font-weight: 400;
+ }
+
+ .secondpart .container {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     overflow: scroll;
+     -ms-overflow-style: none;
+     scrollbar-width: none;
+     width: 100%;
+     padding: 10px 2px;
+ }
+
+ .secondpart .container .box {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     flex: 0 0 auto;
+     max-width: 18rem;
+     padding: 8px 10px;
+     margin: 5px 5px;
+     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: .3s ease;
+     background-color: white;
+ }
+
+ .secondpart .container .box:hover {
+     background-color: rgb(241, 207, 181);
+ }
+
+ .secondpart .container .box img {
+     width: 60px;
+ }
+
+ .secondpart .container .box p {
+     color: rgb(41, 41, 41);
+     font-family: 'Roboto';
+ }
+
+ .secondpart .container .box p,
+ span {
+     padding: 5px 0px;
+     text-align: center;
+ }
+
+ .secondpart .container .box p {
+     font-size: 18px;
+ }
+
+ .secondpart .container .box span {
+     font-size: 14px;
+     font-family: 'Roboto';
+     color: rgb(84, 83, 83);
+ }
+
+
+ @media (max-width: 768px) {
+     .secondpart {
+         align-items: start;
+     }
+
+     .heading {
+         width: 100%;
+     }
+
+     .secondpart .container .box {
+         max-width: 90%;
+         padding: 30px 10px;
+     }
+
+ }

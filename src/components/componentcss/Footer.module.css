@@ -1,0 +1,99 @@
+ .container {
+     padding: 0;
+     background: url('/images/pic1.jpg');
+     background-size: cover;
+     background-position: center;
+     margin-top: 3rem;
+ }
+
+ footer {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     align-items: center;
+     background-color: rgba(0, 0, 0, 0.553);
+     padding: 20px 10px;
+ }
+
+ footer .icon {
+     margin: 15px 10px;
+     cursor: pointer;
+     color: rgb(255, 255, 255);
+ }
+
+ footer .icon:hover {
+     color: rgb(195, 187, 187);
+ }
+
+
+ .container footer .box .logopart {
+     display: flex;
+     align-items: center;
+ }
+
+ .container footer .box .logopart img {
+     width: 6rem;
+     border-radius: 50%;
+     margin-right: 5px;
+ }
+
+ .container footer .box {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin: 0;
+     width: 20rem;
+     position: relative;
+ }
+
+
+ .container footer .box h2 {
+     color: white;
+     font-family: 'Roboto';
+     margin-top: 1rem;
+     font-weight: bold;
+ }
+
+ .container footer .box p {
+     font-size: 18px;
+     color: rgb(221, 218, 218);
+     font-family: 'Roboto';
+     margin-top: 10px;
+     width: fit-content;
+ }
+
+ .container footer .box p:hover {
+     color: rgb(174, 171, 171);
+ }
+
+ .container footer .box a {
+     text-decoration: none;
+ }
+
+ .container footer .box span {
+     color: rgb(221, 218, 218);
+     font-size: 25px;
+     font-family: 'Roboto';
+     text-align: left;
+     margin-top: .5rem;
+     text-decoration: underline;
+ }
+
+ @media(max-width:768px) {
+     footer {
+         justify-content: center;
+     }
+
+     .container footer .box {
+         margin-top: 2rem;
+         justify-content: center;
+         align-items: center;
+         border-bottom: 1px solid white;
+         border-right: none;
+         padding-bottom: 10px;
+     }
+
+     .container footer .box p {
+         text-align: center;
+     }
+ }
