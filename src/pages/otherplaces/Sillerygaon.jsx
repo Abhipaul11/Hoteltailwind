@@ -11,7 +11,6 @@ function Sillerygaon() {
 
     return (
         <>
-            <Navbar />
 
             <Banner title={sillerygaon.title} description={sillerygaon.description} image={sillerygaon.image} />
 
@@ -38,7 +37,6 @@ function Sillerygaon() {
                 ))}
             </div>
 
-            <Footer />
         </>
     );
 }

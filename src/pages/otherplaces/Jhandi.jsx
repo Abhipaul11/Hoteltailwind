@@ -11,7 +11,6 @@ function Jhandi() {
 
     return (
         <>
-            <Navbar />
             <Banner title={jhandi.title} description={jhandi.description} image={jhandi.image} />
 
             <h2 className={styles.rheading}>Rooms in Jhandi</h2>
@@ -38,7 +37,6 @@ function Jhandi() {
                 ))}
             </div>
 
-            <Footer />
         </>
     )
 }

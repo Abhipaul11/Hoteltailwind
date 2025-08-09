@@ -12,7 +12,7 @@ function Navbar() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-    // Detect screen size changes
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -33,11 +33,22 @@ function Navbar() {
         }
     };
 
+    const handleLinkClick = () => {
+        if (isMobile) {
+            setIsMenuOpen(false);
+            setIsDropdownOpen(false);
+        }
+    };
+
     return (
         <nav className={styles.navbar}>
             <div className={styles.logo}>
-                <Link to='/'><img src="../images/logo.jpg" alt="Logo" /></Link>
-                <Link to='/'> <span className={styles.logoheading}>Shanti Group</span></Link>
+                <Link to='/' onClick={handleLinkClick}>
+                    <img src="../images/logo.jpg" alt="Logo" />
+                </Link>
+                <Link to='/' onClick={handleLinkClick}>
+                    <span className={styles.logoheading}>Shanti Group</span>
+                </Link>
             </div>
 
             <div className={styles.hamburger} onClick={toggleMenu}>
@@ -45,13 +56,12 @@ function Navbar() {
             </div>
 
             {/* Menu */}
-            {/* <ul className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ''}`}> */}
             <ul className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ''}`}>
-                <Link to="/" className={styles.hashlink}>
+                <Link to="/" className={styles.hashlink} onClick={handleLinkClick}>
                     <li>Home</li>
                 </Link>
 
-                <Link to="/aboutpage" className={styles.hashlink}>
+                <Link to="/aboutpage" className={styles.hashlink} onClick={handleLinkClick}>
                     <li>About Us</li>
                 </Link>
 
@@ -67,32 +77,35 @@ function Navbar() {
                         <IoMdArrowDropdown
                             color='black'
                             size={20}
-                            style={{ transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s ease' }}
+                            style={{
+                                transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                                transition: 'transform 0.2s ease'
+                            }}
                         />
                     </div>
 
                     {isDropdownOpen && (
                         <ul className={styles.dropdownMenu}>
-                            <Link to="/jhandi" className={styles.dropdownlink}><li>Jhandi</li></Link>
-                            <Link to="/purbasthali" className={styles.dropdownlink}><li>Purbasthali</li></Link>
-                            <Link to="/takdah" className={styles.dropdownlink}><li>Takdah</li></Link>
-                            <Link to="/sillerygaon" className={styles.dropdownlink}><li>Sillerygaon</li></Link>
-                            <Link to="/ramdhura" className={styles.dropdownlink}><li>Ramdhura</li></Link>
-                            <Link to="/sittong" className={styles.dropdownlink}><li>Sittong</li></Link>
-                            <Link to="/rockyisland" className={styles.dropdownlink}><li>Rocky Island</li></Link>
+                            <Link to="/jhandi" className={styles.dropdownlink} onClick={handleLinkClick}><li>Jhandi</li></Link>
+                            <Link to="/purbasthali" className={styles.dropdownlink} onClick={handleLinkClick}><li>Purbasthali</li></Link>
+                            <Link to="/takdah" className={styles.dropdownlink} onClick={handleLinkClick}><li>Takdah</li></Link>
+                            <Link to="/sillerygaon" className={styles.dropdownlink} onClick={handleLinkClick}><li>Sillerygaon</li></Link>
+                            <Link to="/ramdhura" className={styles.dropdownlink} onClick={handleLinkClick}><li>Ramdhura</li></Link>
+                            <Link to="/sittong" className={styles.dropdownlink} onClick={handleLinkClick}><li>Sittong</li></Link>
+                            <Link to="/rockyisland" className={styles.dropdownlink} onClick={handleLinkClick}><li>Rocky Island</li></Link>
                         </ul>
                     )}
                 </li>
 
-                <Link to="/travelpackage" className={styles.hashlink}>
+                <Link to="/travelpackage" className={styles.hashlink} onClick={handleLinkClick}>
                     <li>Travel packages</li>
                 </Link>
 
-                <Link to="/gallery" className={styles.hashlink}>
+                <Link to="/gallery" className={styles.hashlink} onClick={handleLinkClick}>
                     <li>Gallery</li>
                 </Link>
 
-                <HashLink to="/contactus" className={styles.hashlink}>
+                <HashLink to="/contactus" className={styles.hashlink} onClick={handleLinkClick}>
                     <li>Contact</li>
                 </HashLink>
 

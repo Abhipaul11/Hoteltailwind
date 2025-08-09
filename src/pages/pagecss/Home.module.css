@@ -99,7 +99,7 @@
     font-size: 24px;
     font-weight: bold;
     color: white;
-} 
+}
 
 .content .typingParagraph {
     line-height: 27px;
@@ -127,11 +127,6 @@
     position: absolute;
     bottom: -3rem;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     z-index: 1;
 }
 
@@ -152,7 +147,7 @@
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    margin-top: 4rem;
+    margin-top: 6rem;
     background-color: #f8f9fa;
     padding: 0px 1rem;
 }
@@ -165,13 +160,10 @@
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    padding: 15px 5px;
+    max-width: 1400px;
+    margin: auto;
 }
 
-
-.Homecard p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 
 .topheading h3 {
     font-weight: 400;
@@ -323,37 +315,23 @@
     border-radius: 6px;
     overflow: hidden;
     flex: 0 0 auto;
-    max-width: 250px;
-    max-height: 280px;
+    max-width: 280px;
 }
 
 .Homecard:hover {
-    transform: translateY(-5px);
-    cursor: pointer;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .Homecard img {
     width: 100%;
     height: 10rem;
     object-fit: cover;
-    margin: 0;
-    padding: 0;
-}
 
-.Homecard p {
-    color: black;
-    font-family: "Poppins";
-    font-size: 16px;
-    padding: 5px;
-    text-align: left;
-    height: auto;
-    margin: 0;
 }
 
 .Homecard span {
     color: rgb(43, 42, 42);
-    font-size: 15px;
+    font-size: 13px;
     text-align: left;
     font-family: "Poppins";
 }

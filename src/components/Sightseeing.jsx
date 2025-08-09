@@ -14,9 +14,9 @@ function Sightseeing() {
 
     return (
         <>
-            <section className=" max-w-[1100px] mx-auto">
+            <section className=" max-w-[1200px] mx-auto px-2">
 
-                <div className="mt-10 px-5">
+                <div className="mt-12 px-2">
                     <h3 className="text-xl font-bold text-red-900 mb-2">Sightseeing in Nearby Attractions</h3>
                     <p className="text-gray-600 text-base">
                         Explore the breathtaking beauty around you. Whether you're into photography, relaxation, or adventure,

@@ -4,19 +4,16 @@
      transition: transform 0.3s ease;
      overflow: hidden;
      margin: 5px;
-     flex: 0 0 auto;
      position: relative;
-     height: fit-content;
-     max-width: 20rem;
-     width: 30%;
+     width: 380px;
+     height: 250px;
+     flex: 0 0 auto;
  }
-
-
 
  .card .cardImage {
      object-fit: cover;
-     height: 15rem;
-     width: 20rem;
+     height: 100%;
+     width: 100%;
  }
 
  .card .cardText {
@@ -25,19 +22,18 @@
      width: 100%;
      text-align: center;
      color: white;
-     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
-     padding: 10px 0px;
+     background: linear-gradient(0deg, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+     padding: 5px;
      font-weight: lighter;
-     font-size: 16px;
-     letter-spacing: 1px;
+     font-size: 13px;
 
  }
+
 
  .cardcontainer {
      display: flex;
      justify-content: space-between;
      align-items: center;
-     padding: 5px;
      overflow: scroll;
      -ms-overflow-style: none;
      scrollbar-width: none;
@@ -46,13 +42,7 @@
 
  @media (max-width: 768px) {
      .card {
-         width: 230px;
-         max-height: max-content;
-     }
-
-     .cardcontainer {
-         padding: 0px;
-         justify-content: space-between;
+         width: 300px;
      }
 
      .heroheading p {

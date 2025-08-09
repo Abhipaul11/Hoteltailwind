@@ -51,7 +51,7 @@ function App() {
     return (
         <div className=" ">
             <h1 className="text-2xl text-center font-bold mb-2 text-gray-800">Frequently Asked Questions</h1>
-            <div className="w-[95%] max-w-[700px] mx-auto overflow-hidden p-4">
+            <div className="w-[95%] max-w-[800px] mx-auto overflow-hidden p-4">
                 {data.map((item, index) => (
                     <AccordionItem
                         key={index}

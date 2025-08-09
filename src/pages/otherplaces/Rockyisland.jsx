@@ -17,7 +17,6 @@ function RockyIsland() {
 
     return (
         <>
-            <Navbar />
             <Banner title={rockyisland.title} description={rockyisland.description} image={rockyisland.image} />
 
             <h2 className={styles.rheading}>Rooms in <span>Rocky Island</span></h2>
@@ -44,7 +43,6 @@ function RockyIsland() {
                 </div>
             </div>
 
-            <Footer />
         </>
     );
 }

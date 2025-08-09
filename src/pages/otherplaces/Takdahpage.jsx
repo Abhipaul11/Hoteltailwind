@@ -11,7 +11,6 @@ function Takdahpage() {
 
     return (
         <>
-            <Navbar />
 
             <Banner title={takdah.title} description={takdah.description} image={takdah.image} />
 
@@ -38,7 +37,6 @@ function Takdahpage() {
                 ))}
             </div>
 
-            <Footer />
         </>
     );
 }

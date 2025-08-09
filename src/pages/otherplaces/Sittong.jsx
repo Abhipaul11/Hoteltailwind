@@ -17,7 +17,6 @@ function Sittong() {
 
     return (
         <>
-            <Navbar />
             <Banner title={sittong.title} description={sittong.description} image={sittong.image} />
 
             <h2 className={styles.rheading}>Rooms in <span>Sittong</span></h2>
@@ -44,7 +43,6 @@ function Sittong() {
                 </div>
             </div>
 
-            <Footer />
         </>
     );
 }

@@ -8,7 +8,6 @@ function Gallery() {
 
     return (
         <>
-            <Navbar />
 
             {/* <div classNameName={styles.imagecontainer}>
                 <img src="/jhandi/jpic1.jpg" alt="" />
@@ -57,7 +56,6 @@ function Gallery() {
             </div>
 
 
-            <Footer />
         </>
     );
 }

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Lastcomp() {
     return (
         <>
-            <div className="max-w-[900px] w-[90%] " style={{ margin: "4rem auto" }}>
+            <div className="max-w-[1200px] w-[90%] " style={{ margin: "4rem auto" }}>
                 <div className='flex justify-between align-middle mb-2'>
                     <h2 className='text-xl' >Services</h2>
                     <Link to='/aboutpage'>  <button type="button" class="text-white font-medium rounded-2xl text-sm px-2 py-1 text-center inline-flex items-center dark:bg-green-700 dark:hover:bg-green-800 ">
@@ -14,7 +14,7 @@ export default function Lastcomp() {
                         </svg>
                     </button></Link>
                 </div>
-                <div className="w-full flex flex-col md:flex-row gap-8 rounded-xl ">
+                <div className="w-full max-w-[1200px] flex flex-col md:flex-row gap-8 rounded-xl ">
 
                     {/* Left Content */}
                     <div className="flex flex-col justify-between flex-1 gap-4">

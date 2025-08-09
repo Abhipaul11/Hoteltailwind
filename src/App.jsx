@@ -18,6 +18,8 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Jhandi from './pages/otherplaces/Jhandi';
 import Purbasthali from './pages/otherplaces/Purbasthali';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -40,6 +42,7 @@ function App() {
       ) : (
         // Render Layout and wrap Routes inside it
         <Layout>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path='/gallery' element={<Gallery />} />
@@ -55,6 +58,7 @@ function App() {
             <Route path="/sittong" element={<Sittong />} />
             <Route path="/rockyisland" element={<Rockyisland />} />
           </Routes>
+          <Footer />
         </Layout>
       )}
     </BrowserRouter>

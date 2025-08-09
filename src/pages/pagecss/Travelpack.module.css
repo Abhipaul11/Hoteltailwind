@@ -228,24 +228,13 @@
 }
 
 
-.beforeheading {
-    width: 95%;
-    margin: auto;
-    margin-top: 2rem;
-    font-family: "Poppins";
-    max-width: 55rem;
-    color: brown;
-    font-weight: bold;
-    font-size: large;
-}
 
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
-    max-width: 55rem;
+    max-width: 1000px;
     width: 97%;
     margin: auto;
 }
@@ -257,7 +246,7 @@
     align-content: center;
     gap: 8px;
     padding: 10px;
-    width: 16rem;
+    width: 230px;
 }
 
 .container .box img {

@@ -10,7 +10,6 @@ function Purbasthali() {
     const purbasthali = placesData.purbasthali
     return (
         <>
-            <Navbar />
             <Banner title={purbasthali.title} description={purbasthali.description} image={purbasthali.image} />
 
             <h2 className={styles.rheading}>Rooms in <span>Purbasthali</span></h2>
@@ -36,7 +35,6 @@ function Purbasthali() {
                 ))}
             </div>
 
-            <Footer />z
         </>
     )
 }

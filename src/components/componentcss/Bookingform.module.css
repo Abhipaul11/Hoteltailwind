@@ -4,11 +4,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* padding: 5px; */
+    max-width: 1200px;
+    margin: auto;
     border-radius: 8px;
     background-color: aliceblue;
     width: 90%;
-    margin: 0;
 }
 
 .bookingform .inputgroup {
@@ -40,7 +40,7 @@
     color: white;
     font-size: 15px;
     padding: 5px 20px;
-    font-family: 'Poppins';
+    margin-top: 20px;
 }
 
 .enquiry:hover {

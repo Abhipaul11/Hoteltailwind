@@ -15,7 +15,6 @@ function Travelpack() {
     }, []);
     return (
         <>
-            <Navbar />
 
             <div className={styles.overlay}>
                 <section className={styles.heroSection}>
@@ -76,11 +75,13 @@ function Travelpack() {
                     </div>
                 ))}
             </div>
+            <div className="max-w-[1000px] mx-auto mt-10 px-2">
+                <div className='font-bold text-amber-900 text-xl '>Perfect Vacation planning for you</div>
+                <div className="text-gray-700 ">
+                    Whether you're looking to unwind in the peaceful hills of Kalimpong, explore the high passes of Ladakh, or enjoy scenic adventures in Sikkim and Nepal, we curate every travel plan to match your comfort and curiosity. From transportation and lodging to sightseeing and local cuisine — we take care of everything, so you can travel stress-free and soak in every moment of your journey.
+                </div>
 
-            <h3 className={styles.beforeheading}>Perfect Vacation planning for you</h3>
-            <p className="max-w-[55rem] w-[95%] mx-auto text-gray-700 mb-4">
-                Whether you're looking to unwind in the peaceful hills of Kalimpong, explore the high passes of Ladakh, or enjoy scenic adventures in Sikkim and Nepal, we curate every travel plan to match your comfort and curiosity. From transportation and lodging to sightseeing and local cuisine — we take care of everything, so you can travel stress-free and soak in every moment of your journey.
-            </p>
+            </div>
 
 
             <div className={styles.container}>
@@ -94,7 +95,6 @@ function Travelpack() {
                 ))}
             </div>
 
-            <Footer />
         </>
     )
 }

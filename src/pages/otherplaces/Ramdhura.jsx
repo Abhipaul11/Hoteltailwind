@@ -17,7 +17,6 @@ function Ramdhura() {
 
     return (
         <>
-            <Navbar />
             <Banner title={ramdhura.title} description={ramdhura.description} image={ramdhura.image} />
 
             <h2 className={styles.rheading}>Rooms in <span>Ramdhura</span></h2>
@@ -44,7 +43,6 @@ function Ramdhura() {
                 </div>
             </div>
 
-            <Footer />
         </>
     );
 }

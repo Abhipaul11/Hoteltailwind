@@ -70,7 +70,6 @@ function ContactUs() {
 
     return (
         <>
-            <Navbar />
 
             <section id='contactpage' className={styles.contact_container} data-aos="slide-right">
                 <h2 className={styles.heading}>Get In Touch</h2>
@@ -103,7 +102,6 @@ function ContactUs() {
 
             </section>
 
-            <Footer />
 
         </>
     );
