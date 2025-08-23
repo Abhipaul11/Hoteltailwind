@@ -143,147 +143,90 @@
 }
 
 
-.cardpart {
-    overflow: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    margin-top: 6rem;
-    background-color: #f8f9fa;
-    padding: 0px 1rem;
-}
-
-
-.cardpart .cards {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    overflow: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    max-width: 1400px;
-    margin: auto;
-}
-
-
-.topheading h3 {
-    font-weight: 400;
-    text-align: center;
-    background: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgba(26, 26, 26, 1);
-    font-size: 30px;
-}
-
-.topheading p {
-    text-align: center;
-    font-size: 17px;
-    background: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgba(26, 26, 26, 1);
-}
-
-.container {
-    padding-top: 1rem;
-    background-size: cover;
-    background-position: center;
+.homesecond {
     display: flex;
     justify-content: space-between;
-    background-color: #f8f9fa;
-
+    background-color: #e4e8ec;
+    max-width: 1350px;
+    margin: 4rem auto;
+    padding: 2rem 10px;
+    gap: 20px;
+    border-radius: 10px;
 }
 
-.container .content2 {
-    padding: 10px 30px;
+.homesecond .content2 {
     flex: 1;
-    max-width: 50%;
-    margin: 0;
-    max-height: 100%;
     align-items: center;
     flex-direction: column;
-    font-family: 'Poppins';
     justify-content: center;
 }
 
-.content2_container .spans {
+.content2_homesecond .spans {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
 }
 
-.content2_container p {
 
-    font-family: 'Poppins';
-}
-
-
-
-.container .content2 .btn1 button {
-    margin: 1rem 0rem;
-    padding: 8px 17px;
-    border-radius: 7px;
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    letter-spacing: 1px;
-    background-color: #05966d;
-    cursor: pointer;
-}
-
-.container .content2 .btn1 button:hover {
-    background-color: #077153;
-}
-
-.container .images {
+.homesecond .images {
     flex: 1;
     display: flex;
-    /* grid-template-columns: repeat(2, 3fr); */
     flex-direction: column;
+    gap: 10px;
     align-items: center;
-    overflow: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    position: relative;
+}
+
+.homesecond .images .mainImage {
+    max-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.homesecond .images .mainImage,
+.smallImage img {
     width: 100%;
 }
 
-.container .images img {
-    width: 400px;
-    border-radius: 15px;
-    transition: 0.3s;
-    border: 2px solid white;
-    height: 200px;
+.homesecond .images .smallImage {
+    position: absolute;
+    max-width: 400px;
+    z-index: 1;
+    bottom: 30px;
+    left: 0;
+    border: 3px solid white;
 }
 
-.images img:hover {
-    transform: scale(1.05);
-}
 
 @media (max-width: 768px) {
     .banner .content {
         width: 90%;
     }
 
-    .container {
+    .formpart {
+        position: relative;
+        bottom: 0;
+    }
+
+    .homesecond {
         flex-direction: column;
         align-items: center;
     }
 
-
-    .container .content2 {
-        max-width: 100%;
-    }
-
-    .container .images {
+    .homesecond .images .smallImage {
         width: 100%;
-        flex-direction: row;
+        position: relative;
+        bottom: 0;
     }
 
-    .container .images .img2 {
-        transform: translateX(0px);
-    }
 
     .cardpart {
         padding: 0px;
     }
+
+
 
 }
 
@@ -292,22 +235,6 @@
         bottom: -5rem;
     }
 
-
-}
-
-@media (max-width: 768px) {
-    .formpart {
-        position: relative;
-        bottom: 0;
-    }
-}
-
-
-
-@media (max-width: 431px) {
-    .container .images img {
-        width: 200px;
-    }
 }
 
 .Homecard {

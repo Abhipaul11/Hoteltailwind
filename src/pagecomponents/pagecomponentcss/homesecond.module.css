@@ -1,0 +1,137 @@
+.homesecond {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 1350px;
+    margin: 3rem auto 8rem;
+    padding: 10px;
+}
+
+/* LEFT SECTION */
+.homesecond .left {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    padding: 2rem 4rem 8rem 10px;
+    gap: 10px;
+}
+
+.homesecond .left .imageBox {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.homesecond .left .imageBox img {
+    width: 100%;
+}
+
+.homesecond .left .imageBox .badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #fff;
+    border: 2px solid #22c55e;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+.homesecond .left .circleLogo {
+    max-width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    right: -2rem;
+    bottom: -4rem;
+    margin: 10px;
+}
+
+.homesecond .left .circleLogo img {
+    width: 100%;
+    height: 100%;
+}
+
+.homesecond .right {
+    flex: 1.3;
+    position: relative;
+}
+
+.homesecond .right .subheading {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.homesecond .right .heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 1rem;
+}
+
+.homesecond .right .heading span {
+    color: #065f46;
+}
+
+.homesecond .right .desc {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.homesecond .right .homesecondcards {
+    display: flex;
+    gap: 1rem;
+    max-width: 700px;
+}
+
+.homesecond .right .homesecondcards .icon {
+    font-size: 2rem;
+    color: #41ae0a;
+    margin-bottom: 0.75rem;
+}
+
+.homesecond .right .homesecondcards h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width:900px) {
+    .homesecond {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .homesecond .left {
+        padding: 0;
+    }
+
+    .homesecond .left .circleLogo {
+        position: relative;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+
+    }
+
+    .homesecond .right {
+        flex: 1;
+    }
+
+    .homesecond .right .homesecondcards {
+        width: 100%;
+        overflow: scroll;
+    }
+}

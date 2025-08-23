@@ -3,18 +3,18 @@ import styles from './pagecss/Home.module.css'
 import { HashLink } from 'react-router-hash-link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 import Sightseeing from '../components/Sightseeing';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import Bookingform from '../components/Bookingform';
 import Lastcomp from '../components/Lastcomp';
-import Lastcardlayout from '../pagecomponents/Lastcardlayout';
 import AccordionComponent from '../components/AccordionComponent';
-import { amenitiesList } from '../constants/Aminities';
-import Lastimglayout from '../pagecomponents/Lastimglayout';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
 
+import { Link } from 'react-router-dom';
+import HomefifthWide from '../pagecomponents/HomefifthWide';
+import Homesecond from "../pagecomponents/Homesecond"
+import AmenitiesSlider from '../pagecomponents/AmenitiesSlider';
 
 function Home() {
     const sliderImages = [
@@ -49,7 +49,6 @@ function Home() {
                 <div data-aos="zoom-in-down">
 
                     <div className={styles.banner}>
-                        {/* <img src="/images/banner.jpg" alt="" /> */}
 
                         {/* Hero Slider */}
                         <div className={styles.slider}>
@@ -94,78 +93,79 @@ function Home() {
                 </div>
             </section >
 
-            <div className={styles.cardpart} data-aos="fade-up">
-                <h2 className='text-center text-amber-800 text-2xl font-semibold ' >List of Aminities</h2>
-                <div className={styles.cards}>
-                    {amenitiesList.map((item, index) => (
-                        <Homecard
-                            key={index}
-                            cardimage={item.cardimage}
-                            cardpara={item.cardpara}
-                            cardtext={item.cardtext}
-                            icon={item.icon}
-                        />
-                    ))}
+
+
+            <AmenitiesSlider />
+
+
+
+            <div className={styles.homesecond}>
+                <div className={styles.content2}>
+                    <div className={styles.content2_homesecond} data-aos="fade-up" data-aos-delay="100">
+                        <h2 className="font-semibold text-2xl text-[#76311e]">
+                            Experience the Beauty of Nature and Create Lasting Memories
+                        </h2>
+                        <p className="text-[#474645] text-md">
+                            From the breathtaking peaks to serene trails, our homestay offers a tranquil escape where you can immerse yourself in nature's beauty and enjoy the fresh mountain air.
+                            Whether you're looking for the <strong>best hotel or homestay in Kalimpong and Jhandi</strong>, we provide a perfect blend of comfort, hospitality, and scenic charm.
+                            Enjoy <strong>local sightseeing tours</strong>, personalized travel experiences, and delicious <strong>home-cooked food services</strong> made with fresh ingredients.
+                            Discover why we are a top choice for families, couples, and nature lovers seeking an unforgettable stay in the hills.
+                        </p>
+
+                        <div className="flex flex-col gap-3 mt-2">
+                            <div className='flex items-start gap-2 '>
+                                <img src="/images/trust.jpg" alt="trust" className='w-8 mt-1' />
+                                <p className="text-[#333] text-md">
+                                    <strong>Trusted by Travelers:</strong> Check reviews and get in touch with us for any queries. Our team is happy to assist with personalized itinerary planning.
+                                </p>
+                            </div>
+
+                            <div className='flex items-start gap-2 '>
+                                <img src="/images/car.png" alt="car" className='w-10 mt-1' />
+                                <p className="text-[#333] text-md leading-snug">
+                                    <strong>Sightseeing & Transport:</strong> Enjoy local sightseeing tours with reliable vehicles, driver-guides, and doorstep pickup-drop convenience.
+                                </p>
+                            </div>
+
+                            <div className='flex items-start gap-2'>
+                                <img src="/images/food.png" alt="food" className='w-8 mt-1' />
+                                <p className="text-[#333] text-md leading-snug">
+                                    <strong>Delicious Local Meals:</strong> Taste authentic homemade dishes made from fresh, locally sourced ingredients. Both veg and non-veg options available.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div className="mt-4 flex gap-2">
+                            <Link to="/aboutpage">
+                                <button className="bg-emerald-600 text-white px-6 py-2 rounded-full shadow-md 
+                     hover:bg-emerald-700 hover:shadow-lg 
+                     transition-all duration-300 ease-in-out 
+                     font-medium tracking-wide">
+                                    Know More
+                                </button>
+                            </Link>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.images} data-aos="fade-up" data-aos-delay="300">
+                    <div className={styles.mainImage}>
+                        <img src="/images/img1.jpg" alt=" " />
+                    </div>
+                    <div className={styles.smallImage}>
+                        <img src="/images/img4.jpg" alt=" t" />
+                    </div>
+
                 </div>
             </div>
 
-            {/* Aminity Cards parts end  */}
-
-            <div className='flex max-w-[1200px] px-2 w-full  flex-col md:flex-row mx-auto mt-16 gap-5'>
-                {/* Left Content */}
-                <div className="w-full md:w-1/2 flex flex-col flex-1 gap-4" data-aos="fade-up">
-                    <h2 className="font-semibold text-2xl text-[#76311e]">
-                        Experience the Beauty of Nature and Create Lasting Memories
-                    </h2>
-                    <p className="text-[#474645] text-md">
-                        From the breathtaking peaks to serene trails, our homestay offers a tranquil escape where you can immerse yourself in nature's beauty and enjoy the fresh mountain air.
-                        Whether you're looking for the <strong>best hotel or homestay in Kalimpong and Jhandi</strong>, we provide a perfect blend of comfort, hospitality, and scenic charm.
-                        Enjoy <strong>local sightseeing tours</strong>, personalized travel experiences, and delicious <strong>home-cooked food services</strong> made with fresh ingredients.
-                        Discover why we are a top choice for families, couples, and nature lovers seeking an unforgettable stay in the hills.
-                    </p>
-
-                    <div className="flex flex-col gap-3">
-                        <div className='flex items-start   gap-2 '>
-                            <img src="/images/trust.jpg" alt="trust" className='w-8 mt-1' />
-                            <p className="text-[#333] text-md">
-                                <strong>Trusted by Travelers:</strong> Check reviews and get in touch with us for any queries. Our team is happy to assist with personalized itinerary planning.
-                            </p>
-                        </div>
-
-                        <div className='flex items-start gap-2 '>
-                            <img src="/images/car.png" alt="car" className='w-8 mt-1' />
-                            <p className="text-[#333] text-md leading-snug">
-                                <strong>Sightseeing & Transport:</strong> Enjoy local sightseeing tours with reliable vehicles, driver-guides, and doorstep pickup-drop convenience.
-                            </p>
-                        </div>
-
-                        <div className='flex items-start gap-2'>
-                            <img src="/images/food.png" alt="food" className='w-8 mt-1' />
-                            <p className="text-[#333] text-md leading-snug">
-                                <strong>Delicious Local Meals:</strong> Taste authentic homemade dishes made from fresh, locally sourced ingredients. Both veg and non-veg options available.
-                            </p>
-                        </div>
-                    </div>
+            <Homesecond />
 
 
-                    <div className="mt-2 flex gap-2">
-                        <button className="bg-emerald-600 text-white px-4 py-1 rounded-2xl ">
-                            Nature Escape
-                        </button>
-                        <button className="bg-blue-400 text-white px-4 py-1 rounded-2xl ">
-                            Seasonal Offer
-                        </button>
-                    </div>
 
-                </div>
-
-                <div className="w-full md:w-1/2 flex flex-col flex-1  gap-2" data-aos="fade-up">
-                    <img src="/images/img1.jpg" alt="Nature 1" className=" h-[200px] object-cover rounded-md" />
-                    <img src="/images/img4.jpg" alt="Nature 2" className="  h-[200px] object-cover rounded-md" />
-                </div>
-            </div>
-
-
+            {/* <HomefifthWide /> */}
 
 
             {/* sightseeing component */}
@@ -177,10 +177,10 @@ function Home() {
                 <Lastcomp />
             </div>
 
-            <Lastcardlayout />
+
             <AccordionComponent />
 
-            <Lastimglayout />
+
 
 
         </>
@@ -188,21 +188,5 @@ function Home() {
 }
 
 
-// aminities card
-function Homecard({ cardimage, cardpara, cardtext, icon: Icon }) {
-    return (
-        <>
-            <div className={styles.Homecard}>
-                <img src={cardimage} alt="" />
-                <div style={{ padding: '5px' }}>
-
-                    <div className='flex align-middle gap-1'> {Icon && <Icon color="rgb(97, 17, 17)" />}{cardpara}</div>
-
-                    <span>{cardtext}</span>
-                </div>
-            </div>
-        </>
-    )
-}
 
 export default Home

@@ -2,8 +2,13 @@ import React, { useEffect } from 'react'
 import styles from './pagecss/About.module.css'
 import { MdHiking, MdNaturePeople } from "react-icons/md";
 import { HashLink } from 'react-router-hash-link';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import {
+    FaBed,
+    FaUtensils,
+    FaTree,
+    FaBinoculars,
+    FaShip,
+} from "react-icons/fa";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -14,7 +19,7 @@ function About() {
 
     return (
         <>
-            <div className="flex flex-col md:flex-row  justify-between gap-8 bg-white px-6 py-12 rounded-lg max-w-[1200px] w-full m-auto " data-aos="fade-up">
+            <div className="flex flex-col md:flex-row  justify-between gap-8 bg-white px-6 py-12 rounded-lg max-w-[1350px] w-full m-auto " data-aos="fade-up">
 
                 {/* Left Content */}
                 <div className="md:w-1/2">
@@ -45,7 +50,7 @@ function About() {
                 </div>
             </div>
 
-            <div className="flex flex-col-reverse md:flex-row  justify-between gap-8 bg-white px-6 rounded-lg max-w-[1200px] w-full m-auto ">
+            <div className="flex flex-col-reverse md:flex-row  justify-between gap-8 bg-white px-6 rounded-lg max-w-[1350px] w-full m-auto ">
 
                 <div className="md:w-1/2">
                     <img
@@ -68,49 +73,100 @@ function About() {
             </div>
 
             <section id='aboutpage'>
-                <div className={styles.secondpart} data-aos="fade-up">
-                    <div className={styles.heading}>
-                        <h3>Our Sevices</h3>
-                        <div style={{ width: '100%', display: "flex", justifyContent: "center" }}>
-                            <div style={{ width: '10rem', backgroundColor: 'red', padding: '1px', textAlign: "center" }}> </div>
-                        </div>
-                    </div>
-                    <div className={styles.container}>
-                        <div className={styles.box}>
-                            <img src="/images/png1.png" alt="" />
-                            <p>Sightseeing service</p>
-                            <span>Would you prefer a half-day city tour or a full day exploring Kalimpong? Let us know your preference, and we’ll adjust your itinerary to ensure a memorable and well-managed experience tailored to you!</span>
-                        </div>
-                        <div className={styles.box}>
-                            <img src="/travelpics/png1.png" alt="" />
-                            <p>Travel Packages</p>
-                            <span>Discover best travel packages that take you through the stunning landscapes of India, Nepal, Bhutan, Sikkim, and more.We have the perfect itinerary for you.</span>
-                        </div>
-                        <div className={styles.box}>
-                            <img src="/images/png2.png" alt="" />
-                            <p>Amidst Nature</p>
-                            <span>Nestled in the tranquil hills of Jhandi, Kalimpong, our location provides breathtaking views of rolling landscapes and majestic peaks. Immerse yourself in nature's beauty, enjoy serene surroundings.</span>
-                        </div>
-                        <div className={styles.box}>
-                            <img src="/images/png3.jpeg" alt="" />
-                            <p>"Delicious Local food"</p>
-                            <span>Best freshly prepared delicious and traditional dishes, offering an authentic taste of the region’s rich culinary heritage.</span>
-                        </div>
-                        <div className={styles.box}>
+                <AboutFeatures />
 
-                            <MdHiking size={40} color='red' />
-                            <p>Activities </p>
-                            <span>Enjoy cozy bonfire evenings, perfect for connecting with nature. Relax and unwind under the stars, sharing stories and experiencing the peaceful ambiance of the surrounding wilderness.</span>
-                        </div>
-
-                    </div>
-                </div>
             </section>
 
 
-            <Footer />
+
         </>
     )
 }
 
 export default About;
+
+
+
+
+
+const aboutFeatures = [
+    {
+        default: true,
+        img: "/images/png1.png",
+        title: "Sightseeing Service",
+        desc: "Would you prefer a half-day city tour or a full day exploring Kalimpong? Let us know your preference, and we’ll adjust your itinerary to ensure a memorable and well-managed experience tailored to you!",
+    },
+    {
+        img: "/travelpics/png1.png",
+        title: "Travel Packages",
+        desc: "Discover the best travel packages that take you through the stunning landscapes of India, Nepal, Bhutan, Sikkim, and more. We have the perfect itinerary for you.",
+    },
+    {
+        img: "/images/png2.png",
+        title: "Amidst Nature",
+        desc: "Nestled in the tranquil hills of Jhandi, Kalimpong, our location provides breathtaking views of rolling landscapes and majestic peaks. Immerse yourself in nature's beauty, enjoy serene surroundings.",
+    },
+    {
+        img: "/images/png3.jpeg",
+        title: "Delicious Local Food",
+        desc: "Best freshly prepared delicious and traditional dishes, offering an authentic taste of the region’s rich culinary heritage.",
+    },
+    // {
+    //     img: "/images/bonfire.png",
+    //     title: "Activities & Bonfire",
+    //     desc: "Enjoy cozy bonfire evenings, perfect for connecting with nature. Relax and unwind under the stars, sharing stories and experiencing the peaceful ambiance of the surrounding wilderness.",
+    // },
+];
+
+function AboutFeatures() {
+    useEffect(() => {
+        AOS.init({
+            duration: 500,
+            once: false,
+            mirror: true,
+        });
+        AOS.refresh();
+    }, []);
+
+    return (
+        <section className="py-12 bg-gray-50 mt-4">
+            <div className="container mx-auto px-4">
+                <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
+                    Our <span className="text-orange-600">Best Services</span>
+                </h2>
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {aboutFeatures.map((item, idx) => (
+                        <div
+                            key={idx}
+                            className={`rounded-2xl p-6 transition shadow-md ${item.default
+                                ? "bg-green-600 text-white "
+                                : "bg-white hover:bg-green-600 text-gray-800 hover:text-white"
+                                }`}
+                            data-aos="fade-up"
+                        >
+                            {item.img && (
+                                <img
+                                    src={item.img}
+                                    alt={item.title}
+                                    className="w-16 h-16 object-contain mb-4 mx-auto"
+                                />
+                            )}
+                            <h3
+                                className={`text-lg font-semibold mb-2 text-center  `}
+                            >
+                                {item.title}
+                            </h3>
+
+                            <p
+                                className={`text-center `}
+                            >
+                                {item.desc}
+                            </p>
+
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
